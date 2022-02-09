@@ -22,7 +22,7 @@ const TweetForm = () => {
 		onSubmit: async ({ tweet }) => {
 			setIsLoading(true)
 			const { data } = await axios({
-				url: 'http://127.0.0.1:5000/cyberbullying',
+				url: 'https://cyberbullyngclassifier.herokuapp.com/cyberbullying',
 				method: 'POST',
 				data: {
 					tweet,
@@ -42,7 +42,7 @@ const TweetForm = () => {
 
 	const getRandomTweet = async () => {
 		const { data } = await axios({
-			url: 'http://127.0.0.1:5000/get-tweet',
+			url: 'https://cyberbullyngclassifier.herokuapp.com/get-tweet',
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json',
