@@ -51,6 +51,7 @@ const TweetForm = () => {
 			},
 		})
 		console.log(data)
+		seTweetAnalysisResult(null)
 		setRandomTweet(data.tweet)
 	}
 
@@ -94,12 +95,12 @@ const TweetForm = () => {
 							</Grid>
 							<Grid item xs={12}>
 								<Grid container direction='row' justifyContent='center' alignItems='space-around'>
-									<Grid item xs={3}>
+									<Grid item xs={12} lg={4} sx={{ mb: 1 }}>
 										<Button size='large' color='success' variant='contained' type='submit' endIcon={<PsychologyIcon />}>
 											Analyse
 										</Button>
 									</Grid>
-									<Grid item xs={4}>
+									<Grid item xs={12} lg={4}>
 										<Button
 											size='large'
 											color='info'
